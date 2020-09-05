@@ -1,1 +1,20 @@
-theme: jekyll-theme-cayman
+name: 'Community Ruby Brasil'
+title: 'Comunidade Ruby Brasil'
+description: 'As comunidades brasileiras de ruby catalogadas até o momento'
+github:
+  repository:
+    name: 'Repositorio da comunidade Ruby Brasil'
+    url: 'https://github.com/guru-br/guru-br.github.io'
+    contribution_text: 'Adicione sua comunidade no site aqui!'
+    owner:
+      url: 'https://github.com/guru-br'
+      name: 'Guru-Br'
+
+telegram:
+  name: 'Ruby Brasil'
+  url: 'https://t.me/rubybrasil'
+
+baseurl: '/'
+url: 'community.ruby.com.br'
+canonical: 'https://community.ruby.com.br'
+theme: 'jekyll-theme-cayman'
