@@ -1,5 +1,11 @@
 ---
 ---
 @import "tailwindcss/base";
+
+a {
+  color: red;
+  text-decoration: underline;
+}
+
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";

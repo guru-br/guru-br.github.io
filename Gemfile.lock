@@ -112,6 +112,7 @@ PLATFORMS
 
 DEPENDENCIES
   html-proofer (~> 3.0)
+  jekyll
   jekyll-postcss
   jekyll-theme-cayman!
   rubocop (~> 0.50)

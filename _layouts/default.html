@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% if site.google_analytics %}
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ site.google_analytics }}');
-      </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ site.google_analytics }}');
+    </script>
     {% endif %}
     <meta charset="UTF-8">
 
@@ -22,17 +25,21 @@
     <link rel="stylesheet" href="{{ '/assets/css/tailwind.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
 
-  <body>
+  <body class="font-default">
     <header class="page-header" role="banner">
-      <h1 class="project-name">{{ site.title }}</h1>
-      <h2 class="project-tagline">{{ site.description }}</h2>
-      <a href="{{ site.github.repository.url }}" target="_blank" class="btn">{{ site.github.repository.contribution_text }}</a>
+      <h1 class="project-name font-semibold">{{ site.title }}</h1>
+      <h2 class="project-tagline mt-2">{{ site.description }}</h2>
+      <a href="{{ site.github.repository.url }}" target="_blank" class="btn no-underline">{{ site.github.repository.contribution_text }}</a>
     </header>
 
-    <main id="content" class="main-content" role="main">
-      {{ content }}
-    </main>
-    <footer class="site-footer">
+    <div class="md:w-3/4 mx-auto">
+      <!--  main-content has all the site style!     <main id="content" class="main-content px-0 py-5 mx-16" role="main"> -->
+      <main id="content" class="px-0 py-5 mx-4 md:mx-16" role="main">
+        {{ content }}
+      </main>
+    </div>
+
+    <footer class="site-footer m-5">
       <span class="site-footer-owner"><a href="{{ site.github.repository.owner.url }}">Este site</a> é mantido pela
         comunidade <a href="{{ site.telegram.url }}" target="_blank">{{ site.telegram.name }}</a> do <a href="https://telegram.org" target="_blank">Telegram</a>, junte-se a nós :D.</span>
       <span class="site-footer-credits">Está pagina foi gerada e hospedada por <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</span>

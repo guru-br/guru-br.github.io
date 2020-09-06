@@ -21,3 +21,14 @@ theme: 'jekyll-theme-cayman'
 
 plugins:
   - jekyll-postcss
+
+collections_dir: 'collections'
+collections:
+  groups:
+    output: true
+
+defaults:
+  - scope:
+      path: 'assets/images'
+    values:
+      image: true
