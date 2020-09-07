@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "postcss-cli": "^7.1.2",
+    "tailwindcss": "^1.8.2"
+  },
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  },
+  "homepage": "https://community.ruby.com.br",
+  "scripts": {
+    "deploy": "gh-pages -b master -d _site/"
+  }
+}
