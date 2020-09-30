@@ -1,16 +1,13 @@
-Repositorio do site de comunidades brasileiras Ruby
+# Comunidades Brasileiras Ruby
 
-Para contribuir você pode:
+Esse repositório tem o propósito de listar/conectar as comunidades brasileiras da linguagem de programação [Ruby](https://www.ruby-lang.org/pt/).
 
-- Criar um fork do projeto e abrir um PR adicionando apontando para staging com
-as informações da sua comunidade;
+## Contribuindo
 
-ps: A branch master é o site compilado e não deve ser usado como base de
-alteração, para isso use a branch staging!
+Leia o guia em [CONTRIBUTING.md](CONTRIBUTING.md).
 
-- Criar uma issue com essas informações para adicionarmos!
-
+## Código de Conduta
 
 Veja nosso codigo de conduta aqui:
 
-(Codigo de conduta do Ruby Brasil)[https://github.com/guru-br/code-of-conduct]
+[Código de Conduta do Ruby Brasil](https://github.com/guru-br/code-of-conduct)
