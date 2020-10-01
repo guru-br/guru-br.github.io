@@ -3,20 +3,38 @@ layout: default
 permalink: /
 ---
 
-  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-    {% for group in site.groups %}
-      <div class="flex flex-col justify-between items-center border-solid border-2 border-red-200 shadow-xl p-4">
-        <div class="w-1/4 my-2">
-          <img src="assets/images/{{ group.name }}.jpeg">
-        </div>
-
-        <div class="text-center text-xl my-2">
-          <span>{{ group.description }}</span>
-        </div>
-
-        <div class="my-2 text-lg">
-          <span>Telegram: </span><a href="https://t.me/{{group.name}}">@{{ group.name }}</a></span>
-        </div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+  {% for group in site.groups %}
+    <div class="flex flex-col justify-between items-center border-solid border-2 border-red-200 shadow-xl p-4">
+      <div class="w-1/4 my-2">
+        <img src="assets/images/{{ group.name | slugify }}.jpeg" title="{{ group.name }}" alt="{{ group.name }}">
       </div>
-    {% endfor %}
-  </div>
+
+      <div class="text-center text-xl my-2">
+        <span>{{ group.description }}</span>
+      </div>
+
+      {% if group.site_url %}
+        <div class="my-2 text-lg">
+          <a href="{{ group.site_url }}">Site</a>
+        </div>
+      {% endif %}
+
+      {% if group.telegram %}
+        <div class="my-2 text-lg">
+          <span>Telegram: </span><a href="https://t.me/{{group.telegram}}">@{{ group.telegram }}</a></span>
+        </div>
+      {% endif %}
+
+      {% if group.slack %}
+        <div class="my-2 text-lg">
+          <span>Slack: </span><a href="{{ group.slack.url }}">{{ group.slack.name }}</a></span>
+
+          {% if group.slack.channel %}
+            <span>(#{{ group.slack.channel }})
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
