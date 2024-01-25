@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-gem 'jekyll'
-gem 'jekyll-postcss'
+gem 'jekyll', '4.3.3'
+gem 'jekyll-postcss', '~> 0.5.0'
 
 gemspec
